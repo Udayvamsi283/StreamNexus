@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamNexus - Revolutionizing Classroom Learning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="./Picsart_25-02-20_08-21-40-123.png" alt="StreamNexus Logo" class="logo-image">
+                <div>
+                    <h1>STREAM<span>NEXUS</span></h1>
+                    <p>LIVE-STREAMING EDUCATIONAL LECTURES</p>
+                </div>
+            </div>
+            <nav>
+                <button class="icon-button" onclick="toggleModal('info-modal')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </button>
+                <button class="icon-button" onclick="toggleModal('settings-modal')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+                <button class="icon-button" onclick="toggleModal('profile-modal')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="slides-container">
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Welcome to StreamNexus – <br>Revolutionizing Classroom Learning<br></h2>
+                        <p>Imagine a world where education has no boundaries. With StreamNexus, lecturers can seamlessly live-stream their classes to multiple classrooms, ensuring that every student receives the same high-quality learning experience—no matter where they are.</p>
+                        <p><strong>🚀 Our Goal:</strong> To bridge the gap between physical and digital learning, making education more accessible, interactive, and efficient.</p>
+                    </div>
+                    <div class="slide-image">
+                        <img src="./1.webp" alt="StreamNexus Concept" class="content-image">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="./2.webp" alt="How StreamNexus Works" class="content-image">
+                    </div>
+                    <div class="slide-content">
+                        <h2>🎥 How It Works</h2>
+                        <ul>
+                            <li>Lecturers live-stream their lessons to other classrooms in real-time.</li>
+                            <li>Students can watch, learn, and engage through smart boards.</li>
+                            <li>A low-latency system ensures smooth, uninterrupted learning.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>📚 Why StreamNexus?</h2>
+                        <ul>
+                            <li>✔ Seamless Live-Streaming – No expensive setups, just quality education.</li>
+                            <li>✔ Better Connectivity – Leverage LAN-based streaming for ultra-low lag.</li>
+                            <li>✔ Effortless Classroom Management – Control and interact with students remotely.</li>
+                        </ul>
+                    </div>
+                    <div class="slide-image">
+                        <img src="./3.png" alt="StreamNexus Benefits" class="content-image">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="./4.webp" alt="Join StreamNexus" class="content-image">
+                    </div>
+                    <div class="slide-content">
+                        <h2>📡 Join the Future of Education with StreamNexus!</h2>
+                        <p>🔘 Start a Class or Join a Class to experience the next generation of learning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="gradient-button start-class" onclick="startClass()">Start Class</button>
+                <button class="gradient-button join-class" onclick="joinClass()">Join Class</button>
+            </div>
+
+            <div id="smartboard-container" class="hidden">
+                <div class="smartboard">
+                    <video id="webcam-stream" autoplay playsinline></video>
+                    <div class="smartboard-frame"></div>
+                    <button class="close-smartboard" onclick="closeSmartboard()">X</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About StreamNexus</h3>
+                    <p>Empowering education through live-streaming technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Instructors</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: udaysynapses@gmail.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StreamNexus. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Modals -->
+        <div id="info-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>About StreamNexus</h2>
+                    <button class="close-button" onclick="toggleModal('info-modal')">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>StreamNexus is a cutting-edge platform for live-streaming educational lectures. We connect students and teachers in real-time, providing an immersive learning experience from anywhere in the world.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Settings</h2>
+                    <button class="close-button" onclick="toggleModal('settings-modal')">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h3>Media Settings</h3>
+                    <p>Do you want to use the camera and microphone?</p>
+                    <div class="media-options">
+                        <label><input type="checkbox" id="camera-toggle"> Turn on camera</label>
+                        <label><input type="checkbox" id="mic-toggle"> Turn on microphone</label>
+                    </div>
+                    <button id="continue-without-media" class="gradient-button settings-button">Continue without microphone and camera</button>
+                    <div id="media-preview">
+                        <video id="camera-preview" autoplay muted></video>
+                        <div id="audio-meter"></div>
+                    </div>
+                    <h3>Appearance</h3>
+                    <label><input type="checkbox" id="dark-mode-toggle"> Dark Mode</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="profile-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Login</h2>
+                    <button class="close-button" onclick="toggleModal('profile-modal')">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="gradient-button settings-button">Log In</button>
+                    </form>
+                    <p class="login-links">
+                        <a href="#">Forgot password?</a> | <a href="#">Sign up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
