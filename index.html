@@ -6,7 +6,7 @@
     <title>StreamNexus - Revolutionizing Classroom Learning</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dark-mode">
     <div class="container">
         <!-- Header -->
         <header>
@@ -17,6 +17,9 @@
                     <p>LIVE-STREAMING EDUCATIONAL LECTURES</p>
                 </div>
             </div>
+            <a href="https://vignaniit.edu.in/" target="_blank" class="college-logo">
+                <img src="./Clg_Logo.png" alt="College Logo">
+            </a>
             <nav>
                 <button class="icon-button" onclick="toggleModal('info-modal')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
@@ -89,9 +92,45 @@
                 <div class="smartboard">
                     <video id="webcam-stream" autoplay playsinline></video>
                     <div class="smartboard-frame"></div>
-                    <button class="close-smartboard" onclick="closeSmartboard()">X</button>
+                    <button class="close-smartboard" onclick="closeSmartboard()">x</button>
                 </div>
             </div>
+        </main>
+        <section id="our-team">
+                <h2>Our Team</h2>
+                <div class="team-members">
+                    <div class="team-member">
+                        <h3>Uday vamsi</h3>
+                        <p>23L31A0549</p>
+                        <a href="https://www.linkedin.com/in/uday-vamsi-darla-559a612b6/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="team-member">
+                        <h3>Bharadwaj</h3>
+                        <p>23L31A0565</p>
+                        <a href="https://www.linkedin.com/in/bharadwaj-donthikurthi-bb8696288/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="team-member">
+                        <h3>Mark rennie</h3>
+                        <p>23L31A0550</p>
+                        <a href="https://www.linkedin.com/in/mark-rennie-dasam-866a022b6/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="team-member">
+                        <h3>Madhav dhavala</h3>
+                        <p>23L31A0559</p>
+                        <a href="https://www.linkedin.com/in/madhav-dhavala-2482582a2/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="team-member">
+                        <h3>Uday shankar</h3>
+                        <p>23L31A0513</p>
+                        <a href="https://www.linkedin.com/in/uday-shankar-uday-601738268/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="team-member">
+                        <h3>Ganesh</h3>
+                        <p>23L31A0528</p>
+                        <a href="https://www.linkedin.com/in/sarahwilson" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!-- Footer -->
@@ -153,7 +192,7 @@
                         <div id="audio-meter"></div>
                     </div>
                     <h3>Appearance</h3>
-                    <label><input type="checkbox" id="dark-mode-toggle"> Dark Mode</label>
+                    <label><input type="checkbox" id="dark-mode-toggle" checked> Dark Mode</label>
                 </div>
             </div>
         </div>

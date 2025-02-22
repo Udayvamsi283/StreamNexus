@@ -1,6 +1,6 @@
 // Global variables
 let stream;
-let darkMode = false;
+let darkMode = true;
 
 // Modal functionality
 function toggleModal(modalId) {
@@ -231,4 +231,55 @@ document
 document.addEventListener("DOMContentLoaded", function () {
   // Add any initialization code here
   console.log("StreamNexus initialized");
+});
+
+// Existing code
+
+// Initialize
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("StreamNexus initialized");
+    
+    // Declare darkModeToggle
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+    // Enable dark mode by default
+    document.body.classList.add("dark-mode");
+    darkModeToggle.checked = true;
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.slide, #our-team, .team-member').forEach(el => {
+        observer.observe(el);
+    });
+});
+
+// Slide-in buttons functionality
+const leftButton = document.querySelector('.slide-button.left');
+const rightButton = document.querySelector('.slide-button.right');
+
+leftButton.addEventListener('mouseenter', () => {
+    leftButton.style.transform = 'translateY(-50%) translateX(95px)';
+});
+
+leftButton.addEventListener('mouseleave', () => {
+    leftButton.style.transform = 'translateY(-50%)';
+});
+
+rightButton.addEventListener('mouseenter', () => {
+    rightButton.style.transform = 'translateY(-50%) translateX(-95px)';
+});
+
+rightButton.addEventListener('mouseleave', () => {
+    rightButton.style.transform = 'translateY(-50%)';
 });
