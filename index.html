@@ -6,7 +6,7 @@
     <title>StreamNexus - Revolutionizing Classroom Learning</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark-mode">
+<body>
     <div class="container">
         <!-- Header -->
         <header>
@@ -32,11 +32,12 @@
                 </button>
             </nav>
         </header>
-
+        <!--Side buttons-->
+        
         <!-- Main Content -->
         <main>
             <div class="slides-container">
-                <div class="slide">
+                <div class="slide"id="Welcome">
                     <div class="slide-content">
                         <h2>Welcome to StreamNexus – <br>Revolutionizing Classroom Learning<br></h2>
                         <p>Imagine a world where education has no boundaries. With StreamNexus, lecturers can seamlessly live-stream their classes to multiple classrooms, ensuring that every student receives the same high-quality learning experience—no matter where they are.</p>
@@ -46,7 +47,7 @@
                         <img src="./1.webp" alt="StreamNexus Concept" class="content-image">
                     </div>
                 </div>
-                <div class="slide">
+                <div class="slide"id="HowItWorks">
                     <div class="slide-image">
                         <img src="./2.webp" alt="How StreamNexus Works" class="content-image">
                     </div>
@@ -59,7 +60,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="slide">
+                <div class="slide"id="Why">
                     <div class="slide-content">
                         <h2>📚 Why StreamNexus?</h2>
                         <ul>
@@ -76,28 +77,20 @@
                     <div class="slide-image">
                         <img src="./4.webp" alt="Join StreamNexus" class="content-image">
                     </div>
-                    <div class="slide-content">
+                    <div class="slide-content"id="JoinNow">
                         <h2>📡 Join the Future of Education with StreamNexus!</h2>
                         <p>🔘 Start a Class or Join a Class to experience the next generation of learning.</p>
                     </div>
                 </div>
             </div>
+        <div>
+            
 
-            <div class="action-buttons">
-                <button class="gradient-button start-class" onclick="startClass()">Start Class</button>
-                <button class="gradient-button join-class" onclick="joinClass()">Join Class</button>
-            </div>
 
-            <div id="smartboard-container" class="hidden">
-                <div class="smartboard">
-                    <video id="webcam-stream" autoplay playsinline></video>
-                    <div class="smartboard-frame"></div>
-                    <button class="close-smartboard" onclick="closeSmartboard()">x</button>
-                </div>
-            </div>
+    </div>
         </main>
         <section id="our-team">
-                <h2>Our Team</h2>
+                <h2>Our Team (CSE-1)</h2>
                 <div class="team-members">
                     <div class="team-member">
                         <h3>Uday vamsi</h3>
@@ -127,12 +120,20 @@
                     <div class="team-member">
                         <h3>Ganesh</h3>
                         <p>23L31A0528</p>
-                        <a href="https://www.linkedin.com/in/sarahwilson" target="_blank">LinkedIn</a>
+                        <a href="" target="_blank">LinkedIn</a>
                     </div>
                 </div>
             </section>
         </main>
-
+            <div id="stream-wrapper">
+                <button id="join-btn" class="gradient-button start-class">Join Class</button>
+                <div id="video-streams"></div>
+                <div id="stream-controls">
+                    <button id="leave-btn" class="gradient-button settings-button">Leave Class</button>
+                    <button id="mic-btn"class="gradient-button settings-button">Mic On</button>
+                    <button id="camera-btn"class="gradient-button settings-button">Camera on</button>
+                </div>
+            </div>
         <!-- Footer -->
         <footer>
             <div class="footer-content">
@@ -143,10 +144,11 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Instructors</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="#Welcome">Home</a></li>
+                        <li><a href="#HowItWorks">How StreamNexus works</a></li>
+                        <li><a href="#Why">Why StreamNexus</a></li>
+                        <li><a href="#JoinNow">Join Now</a></li>
+                        <li><a href="#our-team">Our Team</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -191,8 +193,8 @@
                         <video id="camera-preview" autoplay muted></video>
                         <div id="audio-meter"></div>
                     </div>
-                    <h3>Appearance</h3>
-                    <label><input type="checkbox" id="dark-mode-toggle" checked> Dark Mode</label>
+                    <!--<h3>Appearance</h3>
+                    <label><input type="checkbox" id="dark-mode-toggle" checked> Dark Mode</label>-->
                 </div>
             </div>
         </div>
@@ -223,6 +225,8 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+
 </body>
+    <script src="AgoraRTC_N-4.23.2.js"></script>
+    <script src="main.js"></script>
 </html>

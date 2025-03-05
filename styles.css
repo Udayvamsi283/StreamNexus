@@ -164,6 +164,13 @@ main {
 
 .start-class {
     background: linear-gradient(135deg, #f72b68 0%, #dc2626 100%);
+    position: sticky;
+    top:50%;
+    left:50%;
+    margin-top:-50px;
+    margin-left:-100px;
+    font-size:18px;
+    padding:20px 40px;
 }
 
 .join-class {
@@ -474,32 +481,6 @@ body {
     width: auto;
 }
 
-/* Slide-in buttons */
-.slide-button {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.slide-button.left {
-    left: -100px;
-    border-radius: 0 5px 5px 0;
-}
-
-.slide-button.right {
-    right: -100px;
-    border-radius: 5px 0 0 5px;
-}
-
-.slide-button:hover {
-    transform: translateY(-50%) translateX(95px);
-}
 
 /* Our Team section */
 #our-team {
@@ -521,17 +502,6 @@ body {
 a{
     text-decoration: none;
 }
-/* Scroll animations *//*
-.slide, #our-team, .team-member {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.slide.visible, #our-team.visible, .team-member.visible {
-    opacity: 1;
-    transform: translateY(0);
-}*/
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -542,4 +512,31 @@ a{
     .slide-button {
         display: none;
     }
+}
+/*New*/
+#video-streams{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    height: 90vh;
+    width: 1400px;
+    margin:0 auto;
+}
+
+.video-container{
+    max-height: 100%;
+    border: 10px solid black;
+    border-radius: 15px;
+    box-shadow: inset;
+    background-color: #203A49;
+}
+
+.video-player{
+    height: 100%;
+    width: 100%;
+}
+
+#stream-controls{
+    display: none;
+    justify-content: center;
+    margin-top:0.5em;
 }
