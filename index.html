@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stream Nexus - Live Classroom Streaming</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Hamburger Menu Button -->
+  <div class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h3>Stream Nexus</h3>
+      <div class="close-btn">&times;</div>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="how-to-use.html">How to Use</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="why-streamnexus.html">Why Stream Nexus</a></li>
+      <li><a href="our-team.html">Our Team</a></li>
+      <li><a href="mailto:support@streamnexus.com" class="help-link">Help</a></li>
+    </ul>
+  </div>
+
+  <!-- Overlay for sidebar -->
+  <div class="overlay"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="/placeholder.svg?height=60&width=180" alt="Stream Nexus Logo" class="logo">
+      </div>
+      <div class="college-logo-container">
+        <img src="/placeholder.svg?height=60&width=180" alt="College Logo" class="college-logo">
+      </div>
+      <div class="profile-container">
+        <div class="profile-icon">
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Landing Page Content -->
+    <div class="landing-page">
+      <div class="landing-content">
+        <div class="landing-text">
+          <h1>Welcome to Stream Nexus</h1>
+          <h2>Revolutionizing Classroom Learning</h2>
+          <p>Imagine a world where education has no boundaries. With StreamNexus, lecturers can seamlessly live-stream their classes to multiple classrooms, ensuring that every student receives the same high-quality learning experience—no matter where they are.</p>
+          <p class="goal"><i class="fas fa-rocket"></i> <strong>Our Goal:</strong> To bridge the gap between physical and digital learning, making education more accessible, interactive, and efficient.</p>
+          <button class="get-started-btn">Get Started</button>
+        </div>
+        <div class="landing-image">
+          <img src="/placeholder.svg?height=400&width=500" alt="Live Streaming Illustration">
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Content (Initially Hidden) -->
+    <div class="dashboard">
+      <h2>Streaming Dashboard</h2>
+      <div class="cards-container">
+        <div class="card" id="start-streaming">
+          <div class="card-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3>Start Streaming</h3>
+          <p>Host a new class</p>
+        </div>
+        <div class="card" id="join-stream">
+          <div class="card-icon">
+            <i class="fas fa-sign-in-alt"></i>
+          </div>
+          <h3>Join Stream</h3>
+          <p>Enter a class code</p>
+        </div>
+        <div class="card" id="view-recordings">
+          <div class="card-icon">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <h3>View Recordings</h3>
+          <p>See past sessions</p>
+        </div>
+        <div class="card" id="notes-resources">
+          <div class="card-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3>Notes & Resources</h3>
+          <p>Access study materials</p>
+        </div>
+      </div>
+
+      <!-- Stream View (Initially Hidden) -->
+      <div class="stream-view">
+        <div class="class-code-container">
+          <span>Class Code: </span>
+          <span id="class-code-display">XYZ123</span>
+          <button id="copy-code-btn" title="Copy to clipboard">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+        <div class="video-container">
+          <video id="video-stream" autoplay muted></video>
+        </div>
+        <div class="stream-controls">
+          <button class="control-btn" id="toggle-camera">
+            <i class="fas fa-video"></i>
+          </button>
+          <button class="control-btn" id="toggle-mic">
+            <i class="fas fa-microphone"></i>
+          </button>
+          <button class="control-btn" id="switch-camera">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="control-btn" id="record-class">
+            <i class="fas fa-record-vinyl"></i>
+          </button>
+          <button class="stop-streaming-btn">Stop Streaming</button>
+          <button class="control-btn" id="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Join Stream View (Initially Hidden) -->
+      <div class="join-stream-view">
+        <h3 class="join-stream-caption">Let's learn something new today.</h3>
+        <div class="video-container">
+          <video id="join-video-stream" autoplay></video>
+        </div>
+        <button class="leave-class-btn">Leave Class</button>
+      </div>
+
+      <!-- Join Stream Modal -->
+      <div class="modal" id="join-stream-modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>Join a Stream</h3>
+          <input type="text" id="class-code-input" placeholder="Enter class code">
+          <button id="join-class-btn">Join</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Stream Nexus. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

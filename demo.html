@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="header"></div>
+
+<h1>Hello</h1>
+
+<div id="footer"></div>
+
+    <script>
+  function loadComponent(id, file) {
+    fetch(file)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+      })
+      .catch(error => console.error("Error loading component:", error));
+  }
+
+  window.onload = function () {
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  };
+</script>
+<script src="script.js"></script>
+</body>
+</html>
