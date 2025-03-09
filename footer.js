@@ -1,4 +1,6 @@
-<!-- Footer -->
+// footer.js
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("footer-container").innerHTML = `
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-section">
@@ -32,6 +34,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2023 Stream Nexus. All rights reserved.</p>
+        <p>&copy; 2025 Stream Nexus. All rights reserved.</p>
       </div>
     </footer>
+  `;
+});
