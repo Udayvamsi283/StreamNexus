@@ -5,173 +5,655 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stream Nexus - Career Paths</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="grid-fixes.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script defer src="header.js"></script>
-  <script defer src="footer.js"></script>
 </head>
 <body>
   <div id="header-container"></div>
 
-    <!-- Career Paths Content -->
-    <div class="page-content">
-      <h1 class="page-title">Career Paths for Computer Science Graduates</h1>
-      
-      <div class="department-logo">
-        <img src="/placeholder.svg?height=100&width=300" alt="CSE Department Logo">
+  <!-- Career Paths Content -->
+  <div class="page-content">
+    <h1 class="page-title">Career Paths for Computer Science Graduates</h1>
+    
+    <div class="department-logo">
+      <img src="/placeholder.svg?height=100&width=300" alt="CSE Department Logo">
+    </div>
+    
+    <div class="careers-grid">
+      <div class="career-box" data-career="higher-studies">
+        <div class="career-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Higher Studies</h3>
+        <p>M.Tech, MS, MBA, etc.</p>
       </div>
       
-      <div class="careers-grid">
-        <div class="career-box" data-career="higher-studies">
-          <div class="career-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <h3>Higher Studies</h3>
-          <p>M.Tech, MS, MBA, etc.</p>
+      <div class="career-box" data-career="software-dev">
+        <div class="career-icon">
+          <i class="fas fa-laptop-code"></i>
         </div>
-        
-        <div class="career-box" data-career="software-dev">
-          <div class="career-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <h3>Software Development</h3>
+        <h3>Software Development</h3>
+      </div>
+      
+      <div class="career-box" data-career="data-science">
+        <div class="career-icon">
+          <i class="fas fa-chart-bar"></i>
         </div>
-        
-        <div class="career-box" data-career="data-science">
-          <div class="career-icon">
-            <i class="fas fa-chart-bar"></i>
-          </div>
-          <h3>Data Science</h3>
+        <h3>Data Science</h3>
+      </div>
+      
+      <div class="career-box" data-career="cloud">
+        <div class="career-icon">
+          <i class="fas fa-cloud"></i>
         </div>
-        
-        <div class="career-box" data-career="cloud">
-          <div class="career-icon">
-            <i class="fas fa-cloud"></i>
-          </div>
-          <h3>Cloud Computing</h3>
+        <h3>Cloud Computing</h3>
+      </div>
+      
+      <div class="career-box" data-career="cybersecurity">
+        <div class="career-icon">
+          <i class="fas fa-shield-alt"></i>
         </div>
-        
-        <div class="career-box" data-career="cybersecurity">
-          <div class="career-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3>Cybersecurity</h3>
+        <h3>Cybersecurity</h3>
+      </div>
+      
+      <div class="career-box" data-career="ai-ml">
+        <div class="career-icon">
+          <i class="fas fa-brain"></i>
         </div>
-        
-        <div class="career-box" data-career="ai-ml">
-          <div class="career-icon">
-            <i class="fas fa-brain"></i>
-          </div>
-          <h3>AI & Machine Learning</h3>
+        <h3>AI & Machine Learning</h3>
+      </div>
+      
+      <div class="career-box" data-career="devops">
+        <div class="career-icon">
+          <i class="fas fa-infinity"></i>
         </div>
-        
-        <div class="career-box" data-career="devops">
-          <div class="career-icon">
-            <i class="fas fa-infinity"></i>
-          </div>
-          <h3>DevOps Engineering</h3>
+        <h3>DevOps Engineering</h3>
+      </div>
+      
+      <div class="career-box" data-career="product">
+        <div class="career-icon">
+          <i class="fas fa-tasks"></i>
         </div>
-        
-        <div class="career-box" data-career="product">
-          <div class="career-icon">
-            <i class="fas fa-tasks"></i>
-          </div>
-          <h3>Product Management</h3>
+        <h3>Product Management</h3>
+      </div>
+      
+      <div class="career-box" data-career="systems">
+        <div class="career-icon">
+          <i class="fas fa-sitemap"></i>
         </div>
-        
-        <div class="career-box" data-career="systems">
-          <div class="career-icon">
-            <i class="fas fa-sitemap"></i>
-          </div>
-          <h3>Systems Architecture</h3>
+        <h3>Systems Architecture</h3>
+      </div>
+      
+      <div class="career-box" data-career="iot">
+        <div class="career-icon">
+          <i class="fas fa-microchip"></i>
         </div>
-        
-        <div class="career-box" data-career="iot">
-          <div class="career-icon">
-            <i class="fas fa-microchip"></i>
-          </div>
-          <h3>IoT Development</h3>
+        <h3>IoT Development</h3>
+      </div>
+      
+      <div class="career-box" data-career="blockchain">
+        <div class="career-icon">
+          <i class="fas fa-link"></i>
         </div>
-        
-        <div class="career-box" data-career="blockchain">
-          <div class="career-icon">
-            <i class="fas fa-link"></i>
-          </div>
-          <h3>Blockchain Development</h3>
+        <h3>Blockchain Development</h3>
+      </div>
+      
+      <div class="career-box" data-career="emerging">
+        <div class="career-icon">
+          <i class="fas fa-rocket"></i>
         </div>
-        
-        <div class="career-box" data-career="emerging">
-          <div class="career-icon">
-            <i class="fas fa-rocket"></i>
-          </div>
-          <h3>Other Emerging Fields</h3>
-        </div>
+        <h3>Other Emerging Fields</h3>
       </div>
     </div>
-
-    <!-- Career Detail Modal -->
-    <div class="career-modal">
-      <div class="career-modal-content">
-        <span class="close-career-modal">&times;</span>
-        <div class="career-modal-header">
-          <img id="career-image" src="/placeholder.svg?height=200&width=500" alt="Career Image">
-        </div>
-        <div class="career-modal-body">
-          <h2 id="career-title">Career Title</h2>
-          
-          <div class="career-section">
-            <h3 class="gradient-heading">What is this career path?</h3>
-            <p id="career-what"></p>
-          </div>
-          
-          <div class="career-section">
-            <h3 class="gradient-heading">Why pursue this path?</h3>
-            <p id="career-why"></p>
-          </div>
-          
-          <div class="career-section">
-            <h3 class="gradient-heading">Key features</h3>
-            <ul id="career-features"></ul>
-          </div>
-          
-          <div class="career-section">
-            <h3 class="gradient-heading">Current market demand</h3>
-            <p id="career-demand"></p>
-          </div>
-          
-          <div class="career-section">
-            <h3 class="gradient-heading">Companies hiring</h3>
-            <p id="career-companies"></p>
-          </div>
-          
-          <div class="career-section">
-            <h3 class="gradient-heading">Expected salary in India</h3>
-            <div class="salary-ranges">
-              <div class="salary-range">
-                <h4>Entry-level</h4>
-                <p id="career-salary-entry"></p>
-              </div>
-              <div class="salary-range">
-                <h4>Mid-level</h4>
-                <p id="career-salary-mid"></p>
-              </div>
-              <div class="salary-range">
-                <h4>Senior-level</h4>
-                <p id="career-salary-senior"></p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="career-section">
-            <h3 class="gradient-heading">Required skills</h3>
-            <ul id="career-skills"></ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
 
   <div id="footer-container"></div>
+  <script>
+    // Career data for the Career Paths page
+const careerData = {
+  "higher-studies": {
+    title: "Higher Studies",
+    image: "/placeholder.svg?height=200&width=500&text=Higher+Studies",
+    what: "Pursuing advanced degrees in computer science or related fields after completing a bachelor's degree. This includes Master's programs (M.Tech, MS), doctoral programs (Ph.D.), or specialized business degrees (MBA) with a technology focus.",
+    why: "Higher studies allow for specialization in cutting-edge areas, research opportunities, academic career paths, and often lead to higher-paying positions. They also provide networking opportunities with experts in the field and can be a pathway to international careers.",
+    features: [
+      "Specialization in advanced technical areas",
+      "Research opportunities and contributions to the field",
+      "Academic career possibilities",
+      "International exposure and opportunities",
+      "Higher starting positions in industry",
+    ],
+    demand:
+      "Candidates with advanced degrees are in high demand for specialized roles, research positions, and leadership tracks. The demand is particularly strong in emerging fields like AI, quantum computing, and cybersecurity.",
+    companies:
+      "Research labs at Google, Microsoft, IBM, and other tech giants actively recruit PhDs. Universities, government research organizations, and specialized R&D companies also seek candidates with advanced degrees.",
+    salaryEntry: "₹8,00,000 - ₹12,00,000 per annum (post-Master's)",
+    salaryMid: "₹15,00,000 - ₹25,00,000 per annum",
+    salarySenior: "₹30,00,000 - ₹60,00,000+ per annum",
+    skills: [
+      "Strong research methodology",
+      "Academic writing and publication",
+      "Advanced knowledge in specialized domains",
+      "Critical thinking and problem-solving",
+      "Teaching and mentoring abilities (for academic paths)",
+    ],
+  },
+  "software-dev": {
+    title: "Software Development",
+    image: "/placeholder.svg?height=200&width=500&text=Software+Development",
+    what: "Software development involves designing, coding, testing, and maintaining computer programs and applications that run on various platforms including desktop, mobile, web, and embedded systems.",
+    why: "Software development offers creative problem-solving opportunities, competitive salaries, flexible work arrangements, and the chance to build products used by millions. It's a field with continuous learning and growth potential.",
+    features: [
+      "Creation of applications and systems that solve real-world problems",
+      "Diverse specializations (web, mobile, desktop, embedded)",
+      "Collaborative team environments",
+      "Continuous learning and skill development",
+      "Potential for remote work and flexible schedules",
+    ],
+    demand:
+      "Software developers are consistently among the most in-demand professionals globally. The Bureau of Labor Statistics projects 22% growth in software developer jobs through 2030, much faster than average.",
+    companies:
+      "Major tech companies (Google, Microsoft, Amazon, Apple), product companies (Adobe, Salesforce), startups, and increasingly non-tech companies across all sectors as digital transformation continues.",
+    salaryEntry: "₹3,50,000 - ₹8,00,000 per annum",
+    salaryMid: "₹8,00,000 - ₹18,00,000 per annum",
+    salarySenior: "₹18,00,000 - ₹40,00,000+ per annum",
+    skills: [
+      "Programming languages (Java, Python, JavaScript, etc.)",
+      "Data structures and algorithms",
+      "Software design patterns",
+      "Testing and debugging",
+      "Version control systems",
+      "Problem-solving and logical thinking",
+    ],
+  },
+  "data-science": {
+    title: "Data Science",
+    image: "/placeholder.svg?height=200&width=500&text=Data+Science",
+    what: "Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data. It involves collecting, processing, analyzing, and interpreting large datasets to inform decision-making.",
+    why: "Data Science offers the opportunity to solve complex problems, drive business decisions with data, work across various industries, and command competitive salaries. It's at the intersection of statistics, computer science, and domain expertise.",
+    features: [
+      "Extraction of actionable insights from data",
+      "Development of predictive models",
+      "Data visualization and communication",
+      "Application across virtually all industries",
+      "Combination of technical and business skills",
+    ],
+    demand:
+      "Data Scientists are in extremely high demand as organizations increasingly rely on data-driven decision making. The field has consistently ranked among the top jobs in terms of satisfaction, pay, and growth potential.",
+    companies:
+      "Tech giants (Google, Amazon, Microsoft), financial institutions (JPMorgan Chase, Goldman Sachs), healthcare organizations, e-commerce companies, and consulting firms all employ data scientists.",
+    salaryEntry: "₹5,00,000 - ₹10,00,000 per annum",
+    salaryMid: "₹10,00,000 - ₹20,00,000 per annum",
+    salarySenior: "₹20,00,000 - ₹50,00,000+ per annum",
+    skills: [
+      "Programming (Python, R)",
+      "Statistics and mathematics",
+      "Machine learning algorithms",
+      "Data wrangling and preprocessing",
+      "Data visualization",
+      "SQL and database knowledge",
+      "Domain expertise",
+    ],
+  },
+  cloud: {
+    title: "Cloud Computing",
+    image: "/placeholder.svg?height=200&width=500&text=Cloud+Computing",
+    what: "Cloud Computing professionals design, implement, and manage cloud-based systems and services. They work with platforms like AWS, Azure, and Google Cloud to create scalable, reliable, and cost-effective infrastructure solutions.",
+    why: "Cloud Computing offers exposure to cutting-edge technologies, high demand across industries, competitive compensation, and the opportunity to work on large-scale distributed systems that power modern applications.",
+    features: [
+      "Design and implementation of cloud architectures",
+      "Management of scalable and resilient systems",
+      "Cost optimization of cloud resources",
+      "Security implementation in cloud environments",
+      "Integration of various cloud services and technologies",
+    ],
+    demand:
+      "Cloud skills are among the fastest-growing in demand as organizations continue their digital transformation journeys. Cloud migration, optimization, and security are top priorities for companies across all sectors.",
+    companies:
+      "Cloud providers (AWS, Microsoft Azure, Google Cloud), technology companies, financial institutions, healthcare organizations, and increasingly companies across all industries as they adopt cloud technologies.",
+    salaryEntry: "₹4,00,000 - ₹9,00,000 per annum",
+    salaryMid: "₹9,00,000 - ₹18,00,000 per annum",
+    salarySenior: "₹18,00,000 - ₹45,00,000+ per annum",
+    skills: [
+      "Cloud platforms (AWS, Azure, GCP)",
+      "Infrastructure as Code (Terraform, CloudFormation)",
+      "Containerization (Docker, Kubernetes)",
+      "Networking and security",
+      "Scripting and automation",
+      "Cost management and optimization",
+    ],
+  },
+  cybersecurity: {
+    title: "Cybersecurity",
+    image: "/placeholder.svg?height=200&width=500&text=Cybersecurity",
+    what: "Cybersecurity professionals protect systems, networks, and programs from digital attacks. They design and implement security measures, monitor for breaches, respond to incidents, and develop security policies and procedures.",
+    why: "Cybersecurity offers the chance to protect critical infrastructure, constantly evolve with new challenges, work across all industries, and enjoy excellent job security and compensation. It's a field where you can make a significant impact on organizational safety.",
+    features: [
+      "Protection of sensitive data and systems",
+      "Ethical hacking and vulnerability assessment",
+      "Incident response and forensic analysis",
+      "Security policy development and compliance",
+      "Continuous monitoring and threat intelligence",
+    ],
+    demand:
+      "Cybersecurity professionals are in critical demand worldwide, with a persistent skills gap. As cyber threats continue to evolve and increase in frequency, organizations across all sectors are prioritizing security investments.",
+    companies:
+      "Security firms (Crowdstrike, Palo Alto Networks), government agencies, financial institutions, healthcare organizations, and virtually every medium to large enterprise with valuable digital assets.",
+    salaryEntry: "₹4,50,000 - ₹9,00,000 per annum",
+    salaryMid: "₹9,00,000 - ₹20,00,000 per annum",
+    salarySenior: "₹20,00,000 - ₹50,00,000+ per annum",
+    skills: [
+      "Network security",
+      "Security tools and technologies",
+      "Threat detection and analysis",
+      "Security frameworks and compliance",
+      "Programming and scripting",
+      "Risk assessment and management",
+    ],
+  },
+  "ai-ml": {
+    title: "AI & Machine Learning",
+    image: "/placeholder.svg?height=200&width=500&text=AI+and+Machine+Learning",
+    what: "AI and Machine Learning professionals develop systems that can learn from and make decisions based on data. They design, implement, and deploy algorithms and models that enable computers to perform tasks that typically require human intelligence.",
+    why: "AI & ML offers the opportunity to work on cutting-edge technology, solve complex problems with significant impact, command premium salaries, and shape the future of how machines and humans interact across virtually all industries.",
+    features: [
+      "Development of intelligent systems and algorithms",
+      "Training and optimization of machine learning models",
+      "Implementation of neural networks and deep learning",
+      "Natural language processing and computer vision applications",
+      "Ethical AI development and deployment",
+    ],
+    demand:
+      "AI and ML specialists are among the most sought-after professionals globally. As AI adoption accelerates across industries, the demand for qualified professionals significantly outpaces supply.",
+    companies:
+      "Tech giants (Google, Microsoft, Meta), specialized AI companies (OpenAI, Anthropic), startups, research labs, and increasingly companies across all sectors including healthcare, finance, retail, and manufacturing.",
+    salaryEntry: "₹6,00,000 - ₹12,00,000 per annum",
+    salaryMid: "₹12,00,000 - ₹25,00,000 per annum",
+    salarySenior: "₹25,00,000 - ₹60,00,000+ per annum",
+    skills: [
+      "Programming (Python, R)",
+      "Machine learning algorithms and frameworks",
+      "Deep learning and neural networks",
+      "Mathematics and statistics",
+      "Data preprocessing and feature engineering",
+      "Model evaluation and deployment",
+    ],
+  },
+  devops: {
+    title: "DevOps Engineering",
+    image: "/placeholder.svg?height=200&width=500&text=DevOps+Engineering",
+    what: "DevOps Engineers bridge the gap between software development and IT operations. They implement practices, tools, and methodologies that improve an organization's ability to deliver applications and services at high velocity.",
+    why: "DevOps offers exposure to both development and operations, the opportunity to improve efficiency and productivity, competitive compensation, and the satisfaction of solving complex infrastructure and deployment challenges.",
+    features: [
+      "Automation of software delivery pipelines",
+      "Infrastructure management and scaling",
+      "Monitoring and performance optimization",
+      "Collaboration between development and operations teams",
+      "Continuous integration and deployment practices",
+    ],
+    demand:
+      "DevOps skills are in high demand as organizations seek to increase development velocity and operational reliability. The field continues to grow as more companies adopt DevOps practices and culture.",
+    companies:
+      "Technology companies of all sizes, cloud providers, financial institutions, e-commerce platforms, and increasingly traditional enterprises undergoing digital transformation.",
+    salaryEntry: "₹5,00,000 - ₹10,00,000 per annum",
+    salaryMid: "₹10,00,000 - ₹20,00,000 per annum",
+    salarySenior: "₹20,00,000 - ₹45,00,000+ per annum",
+    skills: [
+      "CI/CD tools (Jenkins, GitLab CI)",
+      "Infrastructure as Code (Terraform, Ansible)",
+      "Containerization (Docker, Kubernetes)",
+      "Cloud platforms",
+      "Scripting and automation",
+      "Monitoring and logging systems",
+    ],
+  },
+  product: {
+    title: "Product Management",
+    image: "/placeholder.svg?height=200&width=500&text=Product+Management",
+    what: "Product Managers guide the development of products from conception to launch and beyond. They define product vision, gather requirements, prioritize features, and work with cross-functional teams to deliver products that meet user needs and business objectives.",
+    why: "Product Management offers the opportunity to shape products used by thousands or millions, work at the intersection of technology and business, develop a diverse skill set, and have significant impact on company success.",
+    features: [
+      "Definition of product vision and strategy",
+      "User research and requirement gathering",
+      "Prioritization and roadmap planning",
+      "Cross-functional team leadership",
+      "Data-driven decision making",
+    ],
+    demand:
+      "Product Managers are in high demand as companies increasingly recognize the importance of product-led growth. Technical PMs with computer science backgrounds are particularly valuable in complex product environments.",
+    companies:
+      "Technology companies (Google, Microsoft, Amazon), product-focused companies (Atlassian, Salesforce), startups, and increasingly traditional companies developing digital products and services.",
+    salaryEntry: "₹7,00,000 - ₹15,00,000 per annum",
+    salaryMid: "₹15,00,000 - ₹30,00,000 per annum",
+    salarySenior: "₹30,00,000 - ₹60,00,000+ per annum",
+    skills: [
+      "Technical understanding",
+      "User experience design principles",
+      "Market and competitive analysis",
+      "Data analysis and metrics",
+      "Communication and stakeholder management",
+      "Agile methodologies",
+    ],
+  },
+  systems: {
+    title: "Systems Architecture",
+    image: "/placeholder.svg?height=200&width=500&text=Systems+Architecture",
+    what: "Systems Architects design and oversee the implementation of complex computing systems. They define the structure, components, modules, interfaces, and data for systems to satisfy specified requirements and ensure they work together effectively.",
+    why: "Systems Architecture offers the opportunity to design large-scale systems, solve complex technical challenges, influence technical direction, and work at a high level of abstraction while still maintaining technical depth.",
+    features: [
+      "Design of complex system structures and interactions",
+      "Technical leadership and guidance",
+      "Balancing of functional and non-functional requirements",
+      "Technology selection and evaluation",
+      "Long-term technical planning and vision",
+    ],
+    demand:
+      "Experienced Systems Architects are in high demand as systems become increasingly complex and interconnected. Organizations need architects who can design scalable, reliable, and secure systems that meet business needs.",
+    companies:
+      "Large technology companies, enterprise software firms, financial institutions, telecommunications companies, and any organization with complex IT systems and infrastructure.",
+    salaryEntry: "₹8,00,000 - ₹15,00,000 per annum",
+    salaryMid: "₹15,00,000 - ₹30,00,000 per annum",
+    salarySenior: "₹30,00,000 - ₹70,00,000+ per annum",
+    skills: [
+      "System design principles",
+      "Multiple technology stacks and platforms",
+      "Performance optimization",
+      "Scalability and reliability engineering",
+      "Security architecture",
+      "Technical documentation",
+    ],
+  },
+  iot: {
+    title: "IoT Development",
+    image: "/placeholder.svg?height=200&width=500&text=IoT+Development",
+    what: "IoT (Internet of Things) Development involves creating systems where physical devices connect to the internet and each other, collecting and sharing data. IoT developers work on hardware interfaces, connectivity, data processing, and applications that utilize connected devices.",
+    why: "IoT Development offers the opportunity to work at the intersection of hardware and software, create tangible products that interact with the physical world, and be part of a rapidly growing field with applications across numerous industries.",
+    features: [
+      "Integration of physical devices with digital systems",
+      "Real-time data collection and analysis",
+      "Development of embedded systems",
+      "Creation of IoT platforms and applications",
+      "Implementation of edge computing solutions",
+    ],
+    demand:
+      "IoT skills are increasingly in demand as more devices become connected and organizations seek to leverage IoT for efficiency, monitoring, and new business models. The IoT market is projected to grow substantially in the coming years.",
+    companies:
+      "Technology companies (Google, Amazon, Microsoft), industrial automation firms, smart home companies, automotive manufacturers, healthcare technology providers, and agricultural technology companies.",
+    salaryEntry: "₹4,00,000 - ₹8,00,000 per annum",
+    salaryMid: "₹8,00,000 - ₹18,00,000 per annum",
+    salarySenior: "₹18,00,000 - ₹40,00,000+ per annum",
+    skills: [
+      "Embedded systems programming",
+      "Hardware interfaces and protocols",
+      "Networking and connectivity",
+      "Cloud platforms for IoT",
+      "Security for connected devices",
+      "Data processing and analytics",
+    ],
+  },
+  blockchain: {
+    title: "Blockchain Development",
+    image: "/placeholder.svg?height=200&width=500&text=Blockchain+Development",
+    what: "Blockchain Development involves creating decentralized applications and systems using blockchain technology. Blockchain developers design, implement, and maintain blockchain protocols, smart contracts, and applications that leverage distributed ledger technology.",
+    why: "Blockchain Development offers the opportunity to work on cutting-edge technology, contribute to potentially transformative applications in finance and beyond, and develop highly specialized skills that command premium compensation.",
+    features: [
+      "Development of decentralized applications (DApps)",
+      "Implementation of smart contracts",
+      "Creation of consensus mechanisms",
+      "Design of tokenomics and incentive structures",
+      "Integration of blockchain with existing systems",
+    ],
+    demand:
+      "Blockchain skills, while more specialized, are in high demand within certain sectors, particularly finance, supply chain, and technology. The field continues to evolve with new applications beyond cryptocurrencies.",
+    companies:
+      "Cryptocurrency companies, financial institutions developing blockchain solutions, supply chain companies, technology consultancies with blockchain practices, and blockchain-focused startups.",
+    salaryEntry: "₹6,00,000 - ₹12,00,000 per annum",
+    salaryMid: "₹12,00,000 - ₹25,00,000 per annum",
+    salarySenior: "₹25,00,000 - ₹50,00,000+ per annum",
+    skills: [
+      "Blockchain protocols and architecture",
+      "Smart contract development",
+      "Cryptography principles",
+      "Distributed systems",
+      "Specific blockchain platforms (Ethereum, Solana, etc.)",
+      "Web3 development",
+    ],
+  },
+  emerging: {
+    title: "Other Emerging Fields",
+    image: "/placeholder.svg?height=200&width=500&text=Emerging+Technologies",
+    what: "Emerging fields in technology include quantum computing, extended reality (AR/VR/MR), edge computing, autonomous systems, and other cutting-edge areas that are still evolving but show significant promise for future growth and impact.",
+    why: "Working in emerging fields offers the opportunity to be at the forefront of innovation, develop highly specialized expertise, potentially shape the direction of new technologies, and position yourself for future opportunities as these fields mature.",
+    features: [
+      "Exploration of cutting-edge technologies",
+      "Research and development focus",
+      "Potential for groundbreaking innovations",
+      "Interdisciplinary collaboration",
+      "Opportunity to become an early expert in growing fields",
+    ],
+    demand:
+      "While demand for emerging technology skills varies by specific field, there is generally strong interest in professionals who can help organizations understand, evaluate, and implement new technologies that may provide competitive advantages.",
+    companies:
+      "Research labs at major tech companies, specialized startups, academic institutions, government research organizations, and forward-thinking companies across various industries investing in emerging technologies.",
+    salaryEntry: "₹5,00,000 - ₹12,00,000 per annum",
+    salaryMid: "₹12,00,000 - ₹25,00,000 per annum",
+    salarySenior: "₹25,00,000 - ₹60,00,000+ per annum",
+    skills: [
+      "Strong foundation in computer science",
+      "Specialized knowledge in the specific emerging field",
+      "Research methodology",
+      "Adaptability and continuous learning",
+      "Interdisciplinary knowledge",
+      "Innovative thinking",
+    ],
+  },
+};
 
+// Function to initialize career boxes and modal functionality
+function initializeCareersModal() {
+  // Wait for DOM to be fully loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    // Check if we're on the careers page
+    const careerBoxes = document.querySelectorAll(".career-box");
+    if (!careerBoxes.length) return;
+
+    // Make sure the modal exists, or create it if it doesn't
+    let careerModal = document.querySelector(".career-modal");
+    if (!careerModal) {
+      careerModal = document.createElement("div");
+      careerModal.className = "career-modal";
+      careerModal.innerHTML = `
+        <div class="career-modal-content">
+          <span class="close-career-modal">&times;</span>
+          <div class="career-modal-header">
+            <img id="career-image" src="/placeholder.svg?height=200&width=500" alt="Career Image">
+          </div>
+          <div class="career-modal-body">
+            <h2 id="career-title">Career Title</h2>
+            
+            <div class="career-section">
+              <h3 class="gradient-heading">What is this career path?</h3>
+              <p id="career-what"></p>
+            </div>
+            
+            <div class="career-section">
+              <h3 class="gradient-heading">Why pursue this path?</h3>
+              <p id="career-why"></p>
+            </div>
+            
+            <div class="career-section">
+              <h3 class="gradient-heading">Key features</h3>
+              <ul id="career-features"></ul>
+            </div>
+            
+            <div class="career-section">
+              <h3 class="gradient-heading">Current market demand</h3>
+              <p id="career-demand"></p>
+            </div>
+            
+            <div class="career-section">
+              <h3 class="gradient-heading">Companies hiring</h3>
+              <p id="career-companies"></p>
+            </div>
+            
+            <div class="career-section">
+              <h3 class="gradient-heading">Expected salary in India</h3>
+              <div class="salary-ranges">
+                <div class="salary-range">
+                  <h4>Entry-level</h4>
+                  <p id="career-salary-entry"></p>
+                </div>
+                <div class="salary-range">
+                  <h4>Mid-level</h4>
+                  <p id="career-salary-mid"></p>
+                </div>
+                <div class="salary-range">
+                  <h4>Senior-level</h4>
+                  <p id="career-salary-senior"></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="career-section">
+              <h3 class="gradient-heading">Required skills</h3>
+              <ul id="career-skills"></ul>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(careerModal);
+    }
+
+    // Get the close button
+    const closeCareerModal = document.querySelector(".close-career-modal");
+
+    // Function to update modal content
+    function updateCareerModal(careerId) {
+      const career = careerData[careerId];
+      if (!career) {
+        console.error("Career not found:", careerId);
+        return;
+      }
+
+      // Update modal content
+      document.getElementById("career-image").src = career.image;
+      document.getElementById("career-title").textContent = career.title;
+      document.getElementById("career-what").textContent = career.what;
+      document.getElementById("career-why").textContent = career.why;
+
+      // Update features list
+      const featuresList = document.getElementById("career-features");
+      featuresList.innerHTML = "";
+      career.features.forEach((feature) => {
+        const li = document.createElement("li");
+        li.textContent = feature;
+        featuresList.appendChild(li);
+      });
+
+      document.getElementById("career-demand").textContent = career.demand;
+      document.getElementById("career-companies").textContent =
+        career.companies;
+
+      // Update salary information
+      document.getElementById("career-salary-entry").textContent =
+        career.salaryEntry;
+      document.getElementById("career-salary-mid").textContent =
+        career.salaryMid;
+      document.getElementById("career-salary-senior").textContent =
+        career.salarySenior;
+
+      // Update skills list
+      const skillsList = document.getElementById("career-skills");
+      skillsList.innerHTML = "";
+      career.skills.forEach((skill) => {
+        const li = document.createElement("li");
+        li.textContent = skill;
+        skillsList.appendChild(li);
+      });
+
+      // Show modal with animation
+      careerModal.style.display = "flex";
+
+      // Use GSAP for animation if available
+      let gsap;
+      if (typeof gsap !== "undefined") {
+        gsap.fromTo(
+          ".career-modal-content",
+          { opacity: 0, y: -50, scale: 0.9 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.7)" }
+        );
+      } else {
+        // Fallback animation with CSS
+        const modalContent = document.querySelector(".career-modal-content");
+        modalContent.style.animation = "modalFadeIn 0.5s forwards";
+      }
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      let gsap;
+      if (typeof gsap !== "undefined") {
+        gsap.to(".career-modal-content", {
+          opacity: 0,
+          y: -50,
+          scale: 0.9,
+          duration: 0.5,
+          onComplete: () => {
+            careerModal.style.display = "none";
+          },
+        });
+      } else {
+        careerModal.style.display = "none";
+      }
+    }
+
+    // Add click event listeners to career boxes
+    careerBoxes.forEach((box) => {
+      box.addEventListener("click", () => {
+        const careerId = box.getAttribute("data-career");
+        updateCareerModal(careerId);
+      });
+    });
+
+    // Add click event listener to close button
+    if (closeCareerModal) {
+      closeCareerModal.addEventListener("click", closeModal);
+    }
+
+    // Close modal when clicking outside
+    careerModal.addEventListener("click", (e) => {
+      if (e.target === careerModal) {
+        closeModal();
+      }
+    });
+
+    // Add keydown event listener to close modal with Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && careerModal.style.display === "flex") {
+        closeModal();
+      }
+    });
+
+    // Add CSS animation if GSAP is not available
+    if (typeof gsap === "undefined") {
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes modalFadeIn {
+          from { opacity: 0; transform: translateY(-50px) scale(0.9); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  });
+}
+
+// Initialize the careers modal functionality
+initializeCareersModal();
+  </script>
+  <script defer src="header.js"></script>
+  <script defer src="footer.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
