@@ -1,66 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stream Nexus - How It Works</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script defer src="header.js"></script>
-  <script defer src="footer.js"></script>
-</head>
-<body>
-  <div id="header-container"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STREAMNEXUS - How It Works</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="header.js"></script>
+    <script defer src="footer.js"></script>
+  </head>
+  <body>
+    <div id="header-container"></div>
 
     <!-- How It Works Content -->
     <div class="page-content">
-      <h1 class="page-title">How Stream Nexus Works</h1>
-      
+      <h1 class="page-title">
+        How STREAM<span>NEXUS</span> Works
+      </h1>
+
       <div class="info-section">
         <div class="info-icon">
           <i class="fas fa-network-wired"></i>
         </div>
         <div class="info-text">
           <h2>What is WebRTC?</h2>
-          <p>WebRTC (Web Real-Time Communication) is an open-source project that provides web browsers and mobile applications with real-time communication via simple APIs. Stream Nexus leverages WebRTC to enable direct peer-to-peer communication without requiring plugins or additional software.</p>
+          <p>
+            WebRTC (Web Real-Time Communication) is an open-source project that
+            provides web browsers and mobile applications with real-time
+            communication via simple APIs. STREAM<span>NEXUS</span
+            >
+            leverages WebRTC to enable direct peer-to-peer communication without
+            requiring plugins or additional software.
+          </p>
         </div>
       </div>
-      
+
       <div class="info-section">
         <div class="info-icon">
           <i class="fas fa-plug"></i>
         </div>
         <div class="info-text">
-          <h2>How Stream Nexus Establishes a Connection</h2>
-          <p>When a host starts a class, Stream Nexus creates a unique session ID (your class code). This code is used to establish a secure connection between the host and participants. Our signaling server facilitates the initial handshake between peers, exchanging network information needed to establish a direct connection.</p>
+          <h2>
+            How STREAM<span>NEXUS</span> Establishes a
+            Connection
+          </h2>
+          <p>
+            When a host starts a class, STREAM<span>NEXUS</span
+            >
+            creates a unique session ID (your class code). This code is used to
+            establish a secure connection between the host and participants. Our
+            signaling server facilitates the initial handshake between peers,
+            exchanging network information needed to establish a direct
+            connection.
+          </p>
         </div>
       </div>
-      
+
       <div class="info-section">
         <div class="info-icon">
           <i class="fas fa-exchange-alt"></i>
         </div>
         <div class="info-text">
           <h2>How Video and Audio Streams are Transmitted</h2>
-          <p>Once connected, audio and video streams are transmitted directly between participants using secure, encrypted channels. This peer-to-peer architecture minimizes latency and ensures high-quality streaming even with limited bandwidth. All data is encrypted end-to-end, ensuring privacy and security for educational content.</p>
+          <p>
+            Once connected, audio and video streams are transmitted directly
+            between participants using secure, encrypted channels. This
+            peer-to-peer architecture minimizes latency and ensures high-quality
+            streaming even with limited bandwidth. All data is encrypted
+            end-to-end, ensuring privacy and security for educational content.
+          </p>
         </div>
       </div>
-      
+
       <div class="info-section">
         <div class="info-icon">
           <i class="fas fa-users"></i>
         </div>
         <div class="info-text">
           <h2>How Our Platform Handles Multiple Participants</h2>
-          <p>Stream Nexus uses a mesh network topology for small classes, where each participant connects directly to every other participant. For larger classes, we implement a Selective Forwarding Unit (SFU) architecture that efficiently routes video streams to minimize bandwidth usage while maintaining quality. This allows us to support classrooms of various sizes without compromising performance.</p>
+          <p>
+            STREAM<span>NEXUS</span> uses a mesh network
+            topology for small classes, where each participant connects directly
+            to every other participant. For larger classes, we implement a
+            Selective Forwarding Unit (SFU) architecture that efficiently routes
+            video streams to minimize bandwidth usage while maintaining quality.
+            This allows us to support classrooms of various sizes without
+            compromising performance.
+          </p>
         </div>
       </div>
     </div>
 
-  <div id="footer-container"></div>
+    <div id="footer-container"></div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-

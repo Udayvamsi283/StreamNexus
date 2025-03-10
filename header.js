@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Sidebar -->
     <div class="sidebar">
       <div class="sidebar-header">
-        <h3>Stream Nexus</h3>
+        <h3>STREAM<span >NEXUS</span></h3>
         <div class="close-btn">&times;</div>
       </div>
       <ul class="sidebar-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="how-to-use.html">How to Use</a></li>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="why-streamnexus.html">Why Stream Nexus</a></li>
+        <li><a href="why-streamnexus.html">Why STREAM<span >NEXUS</span></a></li>
         <li><a href="our-team.html">Our Team</a></li>
         <li><a href="skills-to-learn.html">Skills to Learn</a></li>
         <li><a href="career-paths.html">Career Paths</a></li>
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Top Navigation Bar -->
     <nav class="navbar">
       <div class="logo-container">
-        <img src="/placeholder.svg?height=60&width=180" alt="Stream Nexus Logo" class="logo">
+        <img src="/placeholder.svg?height=60&width=180" alt="STREAMNEXUS Logo" class="logo">
       </div>
       <div class="college-logo-container">
         <img src="/placeholder.svg?height=60&width=180" alt="College Logo" class="college-logo">
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="login-modal">
       <div class="login-modal-content">
         <span class="close-login-modal">&times;</span>
-        <h2>Login to Stream Nexus</h2>
+        <h2>Login to STREAM<span >NEXUS</span></h2>
         <form class="login-form">
           <div class="form-group">
             <label for="username">Username/Email</label>

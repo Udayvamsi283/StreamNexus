@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Stream Nexus. All rights reserved.</p>
+        <p>&copy; 2025 STREAM<span>NEXUS</span>. All rights reserved.</p>
       </div>
     </footer>
   `;

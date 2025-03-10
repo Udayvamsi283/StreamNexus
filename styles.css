@@ -37,7 +37,9 @@ body {
 .container {
   flex: 1;
 }
-
+span{
+  color: #0099ff;
+}
 /* Hamburger Menu */
 .hamburger-menu {
   position: fixed;
@@ -209,7 +211,11 @@ body {
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: var(--text-color);
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -235,7 +241,11 @@ body {
 }
 
 .get-started-btn {
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   color: white;
   border: none;
   padding: 12px 25px;
@@ -279,7 +289,11 @@ body {
   margin-bottom: 30px;
   font-size: 2rem;
   color: var(--text-color);
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -495,7 +509,11 @@ body {
   margin-bottom: 20px;
   text-align: center;
   color: var(--text-color);
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -580,7 +598,11 @@ body {
 }
 
 #join-class-btn {
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   color: white;
   border: none;
   padding: 12px 25px;
@@ -609,7 +631,11 @@ body {
   font-size: 2.5rem;
   color: var(--text-color);
   position: relative;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -622,7 +648,11 @@ body {
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
 }
 
 /* How to Use Page */
@@ -649,7 +679,11 @@ body {
   left: -20px;
   width: 40px;
   height: 40px;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   color: white;
   border-radius: 50%;
   display: flex;
@@ -705,7 +739,11 @@ body {
 .info-icon {
   font-size: 3rem;
   color: var(--accent-color);
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   min-width: 80px;
@@ -720,7 +758,11 @@ body {
   font-size: 1.8rem;
   margin-bottom: 15px;
   color: var(--text-color);
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -731,7 +773,7 @@ body {
   color: var(--text-secondary);
 }
 
-/* Why Stream Nexus Page */
+/* Why STREAMNEXUS Page */
 .comparison-intro {
   text-align: center;
   margin-bottom: 40px;
@@ -770,7 +812,11 @@ body {
 .feature-icon {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -796,7 +842,11 @@ body {
   margin-bottom: 30px;
   font-size: 1.8rem;
   color: var(--text-color);
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -950,7 +1000,11 @@ body {
 .skill-icon {
   font-size: 3rem;
   margin-bottom: 20px;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -986,7 +1040,11 @@ body {
 .gradient-heading {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1009,7 +1067,11 @@ body {
   text-align: center;
   margin-bottom: 30px;
   font-size: 1.8rem;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1035,7 +1097,11 @@ body {
 }
 
 .platform-link:hover {
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 119, 204, 0.3);
 }
@@ -1067,7 +1133,11 @@ body {
 .career-icon {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1144,7 +1214,11 @@ body {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: var(--text-color);
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1191,7 +1265,11 @@ body {
 .contact-icon {
   font-size: 2rem;
   margin-right: 15px;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1219,7 +1297,11 @@ body {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.5rem;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1250,7 +1332,11 @@ body {
 }
 
 .submit-btn {
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   color: white;
   border: none;
   padding: 12px 25px;
@@ -1274,7 +1360,11 @@ body {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.5rem;
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1320,7 +1410,11 @@ body {
 }
 
 .login-btn {
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
   color: white;
   border: none;
   padding: 12px 25px;
@@ -1604,4 +1698,3 @@ body {
     font-size: 1rem;
   }
 }
-
