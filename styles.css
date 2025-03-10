@@ -273,7 +273,6 @@ span{
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Dashboard */
@@ -281,7 +280,7 @@ span{
   display: none;
   padding: 30px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 10%;
 }
 
 .dashboard h2 {
@@ -289,11 +288,7 @@ span{
   margin-bottom: 30px;
   font-size: 2rem;
   color: var(--text-color);
-  background: linear-gradient(
-    to right,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -381,7 +376,10 @@ span{
 .card p {
   color: var(--text-secondary);
 }
-
+#meet{
+  border-radius: 20px;
+  margin: 0 5%;
+}
 /* Stream View */
 .stream-view,
 .streaming-page,

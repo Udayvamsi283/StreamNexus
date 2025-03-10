@@ -645,7 +645,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Call the setup function after a short delay to ensure header is loaded
   setTimeout(setupGetStartedButton, 500);
-
+/*
   // Start Streaming Card Click
   if (startStreamingCard && cardsContainer && streamView) {
     startStreamingCard.addEventListener("click", () => {
@@ -719,7 +719,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
+*/
   // Close Modal
   if (closeModal && joinStreamModal) {
     closeModal.addEventListener("click", () => {

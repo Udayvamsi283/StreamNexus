@@ -32,10 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Top Navigation Bar -->
     <nav class="navbar">
       <div class="logo-container">
-        <img src="/placeholder.svg?height=60&width=180" alt="STREAMNEXUS Logo" class="logo">
+        <h1 style="padding-left:40px;font-size:2em">STREAM<span >NEXUS</span></h1>
+        <p style="padding-left:40px;">Live streaming for education</p>
       </div>
       <div class="college-logo-container">
-        <img src="/placeholder.svg?height=60&width=180" alt="College Logo" class="college-logo">
+        <img src="./Clg_Logo.png" alt="College Logo" class="college-logo" height="100">
       </div>
       <div class="profile-container">
         <div class="profile-icon">
