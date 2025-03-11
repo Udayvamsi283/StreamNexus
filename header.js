@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Top Navigation Bar -->
     <nav class="navbar">
       <div class="logo-container">
-        <h1 style="padding-left:40px;font-size:2em">STREAM<span >NEXUS</span></h1>
-        <p style="padding-left:40px;">Live streaming for education</p>
+      <a href="./index.html"><img src="./img/Logo.png" alt="Logo" class="logo" height="50"></a>
       </div>
       <div class="college-logo-container">
-        <img src="./Clg_Logo.png" alt="College Logo" class="college-logo" height="100">
+      <a href="https://vignaniit.edu.in/" target="blank"><img src="./img/Clg_Logo.png" alt="College Logo" class="college-logo" height="50"></a>
       </div>
+      <div class="college-logo-container"><a href="./skills-to-learn.html"><img src="./img/cse-logo.png" height="50"></a></div>
       <div class="profile-container">
         <div class="profile-icon">
           <i class="fas fa-user-circle"></i>

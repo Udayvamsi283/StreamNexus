@@ -14,6 +14,7 @@
   --card-4-color: #ffbe0b;
   --transition-speed: 0.3s;
   --gradient-start: #0077cc;
+  --gradient-start2: #00e1ff;
   --gradient-end: #00ccaa;
 }
 
@@ -158,7 +159,9 @@ span{
   top: 0;
   z-index: 100;
 }
-
+.logo{
+  padding-left: 40px;
+}
 .logo-container,
 .college-logo-container {
   flex: 1;
@@ -170,7 +173,7 @@ span{
 }
 
 .profile-container {
-  flex: 1;
+  /*flex: 1;*/
   display: flex;
   justify-content: flex-end;
 }
@@ -1000,7 +1003,7 @@ span{
   margin-bottom: 20px;
   background: linear-gradient(
     to right,
-    var(--gradient-start),
+    var(--gradient-start2),
     var(--gradient-end)
   );
   -webkit-background-clip: text;
@@ -1040,7 +1043,7 @@ span{
   margin-bottom: 10px;
   background: linear-gradient(
     to right,
-    var(--gradient-start),
+    var(--gradient-start2),
     var(--gradient-end)
   );
   -webkit-background-clip: text;
@@ -1133,7 +1136,7 @@ span{
   margin-bottom: 15px;
   background: linear-gradient(
     to right,
-    var(--gradient-start),
+    var(--gradient-start2),
     var(--gradient-end)
   );
   -webkit-background-clip: text;
