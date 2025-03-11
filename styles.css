@@ -983,6 +983,8 @@ span{
 }
 
 .skill-box {
+  height: 200px;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 30px;
@@ -1116,6 +1118,8 @@ span{
 }
 
 .career-box {
+  height: 200px;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 25px;
@@ -1611,7 +1615,6 @@ span{
   .card,
   .feature-card {
     max-width: 400px;
-    margin: 0 auto;
   }
 
   .stream-controls,
