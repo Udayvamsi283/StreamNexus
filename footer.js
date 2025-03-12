@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
           </ul>
         </div>
         <div class="footer-section">
-          <h3>Our Team</h3>
+          <h3>From CSE-1 students</h3>
           <ul>
-            <li><a href="https://linkedin.com" target="_blank">Alex Johnson</a></li>
-            <li><a href="https://linkedin.com" target="_blank">Sarah Chen</a></li>
-            <li><a href="https://linkedin.com" target="_blank">Michael Rodriguez</a></li>
-            <li><a href="https://linkedin.com" target="_blank">Priya Patel</a></li>
-            <li><a href="https://linkedin.com" target="_blank">David Kim</a></li>
-            <li><a href="https://linkedin.com" target="_blank">Emma Wilson</a></li>
+            <li><a href="https://www.linkedin.com/in/uday-vamsi-darla-559a612b6/" target="_blank">Uday vamsi (23L31A0549)</a></li>
+            <li><a href="https://www.linkedin.com/in/bharadwaj-donthikurthi-bb8696288/" target="_blank">Bharadwaj (23L31A0565)</a></li>
+            <li><a href="https://www.linkedin.com/in/mark-rennie-dasam-866a022b6/" target="_blank">Mark rennie (23L31A0550)</a></li>
+            <li><a href="https://www.linkedin.com/in/madhav-dhavala-2482582a2/" target="_blank">Madhav dhavala (23L31A0559)</a></li>
+            <li><a href="https://www.linkedin.com/in/uday-shankar-uday-601738268/" target="_blank">Uday shankar (23L31A0513)</a></li>
+            <li><a href="https://linkedin.com" target="_blank">Ganesh (23L31A0528)</a></li>
           </ul>
         </div>
         <div class="footer-section">

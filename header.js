@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <li><a href="our-team.html">Our Team</a></li>
         <li><a href="skills-to-learn.html">Skills to Learn</a></li>
         <li><a href="career-paths.html">Career Paths</a></li>
-        <li><a href="mailto:StreamNexusEdu@gmial.com" class="help-link">Help</a></li>
+        <li><a href="mailto:StreamNexusEdu@gmail.com" class="help-link">Help</a></li>
       </ul>
     </div>
 
