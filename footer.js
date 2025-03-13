@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="footer-section">
           <h3>Connect With Us</h3>
           <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/StreamNexus" class="social-icon" target="blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/Stream_Nexus" class="social-icon" target="blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" class="social-icon" target="blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/stream_nexus_edu/" class="social-icon" target="blank"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
