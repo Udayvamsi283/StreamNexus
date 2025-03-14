@@ -2,7 +2,7 @@
 const CACHE_NAME = 'classroom-stream-v1';
 const ASSETS = [
   '/',
-  '/index.html',
+  '/main.html',
   '/styles.css',
   '/app.js',
   '/offline.html', // Create a simple offline fallback page

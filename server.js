@@ -22,7 +22,7 @@ app.use(express.static("public"));
 
 // Serve the main page
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
+    res.sendFile(__dirname + "/public/main.html");
 });
 
 // Serve the service worker

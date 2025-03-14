@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Classroom</title>
+    <title>Stream Nexus - Live Class</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="header.js"></script>
+    <script defer src="footer.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -139,6 +147,7 @@
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
+    <div id="header-container"></div>
     <div id="main">
         <h1>Virtual Classroom</h1>
         
@@ -175,7 +184,7 @@
             <div class="video-wrapper">
                 <h3>Your Camera</h3>
                 <video id="localVideo" autoplay muted playsinline></video>
-                <div class="no-video" id="localNoVideo">Camera not connected</div>
+                <!--<div class="no-video" id="localNoVideo">Camera not connected</div>-->
             </div>
         </div>
         
@@ -184,12 +193,12 @@
             <div class="remote-video-wrapper">
                 <h3>Teacher's Camera</h3>
                 <video id="remoteVideo" autoplay playsinline></video>
-                <div class="no-video" id="remoteNoVideo">Waiting for teacher's video...</div>
+                <!--<div class="no-video" id="remoteNoVideo">Waiting for teacher's video...</div>-->
             </div>
             <div class="local-video-wrapper">
                 <h3>Your Camera</h3>
-                <video id="localVideo" autoplay muted playsinline></video>
-                <div class="no-video" id="localNoVideo">Camera not connected</div>
+                <!--<video id="localVideo" autoplay muted playsinline></video>-->
+                <!--<div class="no-video" id="localNoVideo">Camera not connected</div>-->
             </div>
         </div>
         
@@ -219,6 +228,7 @@
             document.getElementById('roomInput').value = urlParams.get('room');
         }
     </script>
+    <div id="footer-container"></div>
     <script src="/app.js"></script>
 </body>
 </html>
