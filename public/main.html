@@ -13,19 +13,20 @@
     <script defer src="header.js"></script>
     <script defer src="footer.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
         #main {
             text-align: center;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
         }
         #videoContainer {
             display: none;
             margin-top: 20px;
+            text-align: center;
+            justify-content: center;
         }
         .video-wrapper {
             margin-bottom: 20px;
@@ -34,9 +35,9 @@
         video {
             width: 100%;
             max-width: 640px;
-            border: 1px solid #ccc;
+            border: 5px solid #0099ff;
             border-radius: 5px;
-            background-color: #f0f0f0;
+            background-color: #000000;
         }
         .teacher-container {
             display: flex;
@@ -45,7 +46,7 @@
         }
         .teacher-view {
             width: 100%;
-            max-width: 800px;
+            max-width: 1200px;
         }
         .student-view {
             display: none;
@@ -102,14 +103,10 @@
             font-weight: bold;
             margin: 15px 0;
             padding: 10px;
-            background-color: #f8f8f8;
-            border-radius: 4px;
         }
         .status-container {
             margin: 15px 0;
             padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 4px;
             text-align: center;
         }
         .no-video {
@@ -130,15 +127,13 @@
         .tab {
             padding: 10px 20px;
             cursor: pointer;
-            background-color: #f0f0f0;
             border: 1px solid #ccc;
         }
         .tab.active {
-            background-color: #fff;
+            background-color: #07268e;
             border-bottom: none;
         }
         .role-container {
-            border: 1px solid #ccc;
             border-top: none;
             padding: 20px;
             border-radius: 0 0 5px 5px;
@@ -149,7 +144,7 @@
 <body>
     <div id="header-container"></div>
     <div id="main">
-        <h1>Virtual Classroom</h1>
+        <h1 class=".page-title">Virtual Classroom</h1>
         
         <div class="tab-container">
             <div class="tab active" onclick="switchTab('teacher')">Teacher</div>
@@ -172,6 +167,7 @@
     
     <!-- Video Container -->
     <div id="videoContainer">
+        <h1 class=".page-title">Virtual Classroom</h1>
         <div id="roomCode"></div>
         
         <div class="status-container">
