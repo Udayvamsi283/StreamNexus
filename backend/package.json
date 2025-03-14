@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "webrtc-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/web-bluetooth": "^0.0.21",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "multicast-dns": "^7.2.5",
+    "ngrok": "^5.0.0-beta.2",
+    "nodemon": "^3.1.9",
+    "simple-peer": "^9.11.1",
+    "socket.io": "^4.8.1",
+    "zeroconf": "^0.1.4"
+  }
+}
