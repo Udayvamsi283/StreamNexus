@@ -18,11 +18,7 @@ document.getElementById("startBtn").addEventListener("click", async () => {
     
     // Display room code for sharing
     const roomCodeElement = document.getElementById("roomCode");
-    roomCodeElement.innerText = `Class Code: ${roomID}`;
-    
-    // Create a shareable URL (optional)
-    const shareUrl = `${window.location.origin}?room=${roomID}`;
-    roomCodeElement.innerHTML += `<br><small>Or share this link: <a href="${shareUrl}" target="_blank">${shareUrl}</a></small>`;
+    roomCodeElement.innerText = `${roomID}`;
     
     await startClass(true);
 });
@@ -113,56 +109,57 @@ async function startClass(isTeacherRole) {
 
 // Join Class (Student)
 async function joinClass() {
-    try {
-        isTeacher = false;
-        document.getElementById("main").style.display = "none";
-        document.getElementById("videoContainer").style.display = "block";
-        
-        // Set up student view
-        document.querySelector('.teacher-container').style.display = 'none';
-        document.querySelector('.student-view').style.display = 'flex';
+  try {
+    isTeacher = false;
+    document.getElementById("main").style.display = "none";
+    document.getElementById("videoContainer").style.display = "block";
 
-        // Get camera & mic
-        localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-        document.getElementById("localVideo").srcObject = localStream;
-        
-        // Connect to the room
-        socket.emit("join-room", roomID);
-        
-        // Get teacher ID when connected
-        socket.on("connected-to-teacher", async (teacherID) => {
-            console.log("Connected to teacher:", teacherID);
-            await setupPeerConnection(teacherID);
-        });
+    // Hide teacher-specific controls
+    document.getElementById("teacherControls").style.display = "none";
 
-    } catch (error) {
-        console.error("Error joining class:", error);
-        alert("Could not join the class. Please check your device permissions.");
-    }
+    // Show student view
+    document.querySelector(".teacher-container").style.display = "none";
+    document.querySelector(".student-view").style.display = "flex";
+
+    // Show room code
+    const roomCodeElement = document.getElementById("roomCode");
+    roomCodeElement.innerText = `${roomID}`;
+
+    // Connect to the room
+    socket.emit("join-room", roomID);
+
+    socket.on("connected-to-teacher", async (teacherID) => {
+      console.log("Connected to teacher:", teacherID);
+      await setupPeerConnection(teacherID);
+    });
+  } catch (error) {
+    console.error("Error joining class:", error);
+    alert("Could not join the class. Please check your device permissions.");
+  }
 }
+
 
 // Setup WebRTC connections
 async function setupPeerConnection(peerID) {
     console.log(`Setting up connection with peer: ${peerID}`);
     peerConnections[peerID] = new RTCPeerConnection(config);
 
-    // Add our video/audio tracks to the connection
-    localStream.getTracks().forEach(track => {
+    // Add tracks ONLY if localStream exists (teacher side)
+    if (localStream) {
+      localStream.getTracks().forEach((track) => {
         console.log(`Adding local ${track.kind} track to peer connection`);
         peerConnections[peerID].addTrack(track, localStream);
-    });
-
-    // Handle incoming tracks (only needed for students)
-    if (!isTeacher) {
-        console.log("Setting up remote stream container for teacher's video");
-        remoteStreams[peerID] = new MediaStream();
-        const remoteVideo = document.getElementById("remoteVideo");
-        remoteVideo.srcObject = remoteStreams[peerID];
-        
-        // Update connection status
-        const statusElement = document.getElementById("connectionStatus");
-        if (statusElement) statusElement.textContent = "Connecting to teacher...";
+      });
     }
+
+    // Setup incoming remote tracks (student side)
+    if (!isTeacher) {
+      console.log("Setting up remote stream container for teacher's video");
+      remoteStreams[peerID] = new MediaStream();
+      const remoteVideo = document.getElementById("remoteVideo");
+      remoteVideo.srcObject = remoteStreams[peerID];
+    }
+
 
     // Handle incoming media tracks
     peerConnections[peerID].ontrack = (event) => {
@@ -229,10 +226,13 @@ socket.on("signal", async (data) => {
         console.log(`Creating new peer connection for ${data.senderID}`);
         peerConnections[data.senderID] = new RTCPeerConnection(config);
         
-        // Add our tracks
-        localStream.getTracks().forEach(track => {
-            peerConnections[data.senderID].addTrack(track, localStream);
-        });
+        if (localStream) {
+          localStream.getTracks().forEach((track) => {
+            peerConnections[peerID].addTrack(track, localStream);
+          });
+        }
+
+
         
         // Set up track handling (for students)
         if (!isTeacher) {

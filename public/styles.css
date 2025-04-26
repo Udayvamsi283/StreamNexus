@@ -411,10 +411,10 @@ span{
   font-size: 1.2rem;
 }
 
-#class-code-display {
+.class-code-display {
   font-weight: bold;
   margin: 0 10px;
-  color: var(--accent-color);
+  color: white;
 }
 
 #copy-code-btn {

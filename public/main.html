@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stream Nexus - Live Class</title>
     <link rel="stylesheet" href="/styles.css" />
     <link
@@ -13,215 +13,234 @@
     <script defer src="header.js"></script>
     <script defer src="footer.js"></script>
     <style>
-        #main {
-            text-align: center;
-            justify-content: center;
-            justify-items: center;
-            align-items: center;
-            display: flex;
-            height: 100vh;
-            flex-direction: column;
-        }
-        #videoContainer {
-            display: none;
-            margin-top: 20px;
-            text-align: center;
-            justify-content: center;
-        }
-        .video-wrapper {
-            margin-bottom: 20px;
-            position: relative;
-        }
-        video {
-            width: 100%;
-            max-width: 640px;
-            border: 5px solid #0099ff;
-            border-radius: 5px;
-            background-color: #000000;
-        }
-        .teacher-container {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-        .teacher-view {
-            width: 100%;
-            max-width: 1200px;
-        }
-        .student-view {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-        }
-        .remote-video-wrapper {
-            margin-bottom: 20px;
-            width: 100%;
-            max-width: 640px;
-        }
-        .local-video-wrapper {
-            width: 100%;
-            max-width: 320px;
-        }
-        .controls {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        input, button {
-            padding: 10px 15px;
-            margin: 5px;
-            border-radius: 4px;
-        }
-        input {
-            min-width: 200px;
-        }
-        button {
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #startBtn {
-            background-color: #2196F3;
-        }
-        #startBtn:hover {
-            background-color: #0b7dda;
-        }
-        #endBtn {
-            background-color: #f44336;
-        }
-        #endBtn:hover {
-            background-color: #d32f2f;
-        }
-        #roomCode {
-            font-weight: bold;
-            margin: 15px 0;
-            padding: 10px;
-        }
-        .status-container {
-            margin: 15px 0;
-            padding: 10px;
-            text-align: center;
-        }
-        .no-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #666;
-        }
-        h3 {
-            margin-top: 0;
-        }
-        .tab-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            border: 1px solid #ccc;
-        }
-        .tab.active {
-            background-color: #07268e;
-            border-bottom: none;
-        }
-        .role-container {
-            border-top: none;
-            padding: 20px;
-            border-radius: 0 0 5px 5px;
-        }
+      #main {
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+      }
+      #videoContainer {
+        display: none;
+        margin-top: 20px;
+        text-align: center;
+        justify-content: center;
+      }
+      .video-wrapper {
+        margin-bottom: 20px;
+        position: relative;
+      }
+      video {
+        width: 100%;
+        max-width: 640px;
+        border: 5px solid #0099ff;
+        border-radius: 5px;
+        background-color: #000000;
+      }
+      .teacher-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .teacher-view {
+        width: 100%;
+        max-width: 1200px;
+      }
+      .student-view {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+      }
+      .remote-video-wrapper {
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 640px;
+      }
+      .local-video-wrapper {
+        width: 100%;
+        max-width: 320px;
+      }
+      .controls {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      input,
+      button {
+        padding: 10px 15px;
+        margin: 5px;
+        border-radius: 4px;
+      }
+      input {
+        min-width: 200px;
+      }
+      button {
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #startBtn {
+        background-color: #2196f3;
+      }
+      #startBtn:hover {
+        background-color: #0b7dda;
+      }
+      #endBtn {
+        background-color: #f44336;
+      }
+      #endBtn:hover {
+        background-color: #d32f2f;
+      }
+      #roomCode {
+        font-weight: bold;
+        margin: 15px 0;
+        padding: 10px;
+      }
+      .status-container {
+        margin: 15px 0;
+        padding: 10px;
+        text-align: center;
+      }
+      .no-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #666;
+      }
+      h3 {
+        margin-top: 0;
+      }
+      .tab-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .tab {
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+      }
+      .tab.active {
+        background-color: #07268e;
+        border-bottom: none;
+      }
+      .role-container {
+        border-top: none;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+      }
     </style>
-    <link rel="manifest" href="/manifest.json">
-</head>
-<body>
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
     <div id="header-container"></div>
     <div id="main">
-        <h1 class=".page-title">Virtual Classroom</h1>
-        
-        <div class="tab-container">
-            <div class="tab active" onclick="switchTab('teacher')">Teacher</div>
-            <div class="tab" onclick="switchTab('student')">Student</div>
-        </div>
-        
-        <!-- Teacher Section -->
-        <div id="teacher-container" class="role-container">
-            <h2>Start a New Class</h2>
-            <button id="startBtn">Start Class</button>
-        </div>
-        
-        <!-- Student Section -->
-        <div id="student-container" class="role-container" style="display: none;">
-            <h2>Join an Existing Class</h2>
-            <input type="text" id="roomInput" placeholder="Enter class code">
-            <button id="joinBtn">Join Class</button>
-        </div>
+      <h1 class=".page-title">Virtual Classroom</h1>
+
+      <div class="tab-container">
+        <div class="tab active" onclick="switchTab('teacher')">Teacher</div>
+        <div class="tab" onclick="switchTab('student')">Student</div>
+      </div>
+
+      <!-- Teacher Section -->
+      <div id="teacher-container" class="role-container">
+        <h2>Start a New Class</h2>
+        <button id="startBtn">Start Class</button>
+      </div>
+
+      <!-- Student Section -->
+      <div id="student-container" class="role-container" style="display: none">
+        <h2>Join an Existing Class</h2>
+        <input type="text" id="roomInput" placeholder="Enter class code" />
+        <button id="joinBtn">Join Class</button>
+      </div>
     </div>
-    
+
     <!-- Video Container -->
     <div id="videoContainer">
-        <h1 class=".page-title">Virtual Classroom</h1>
-        <div id="roomCode"></div>
-        
-        <div class="status-container">
-            <div id="connectionStatus">Waiting for connection...</div>
-            <div id="streamStatus"></div>
-        </div>
-        
-        <!-- Teacher View -->
-        <div class="teacher-container">
-            <div class="video-wrapper">
-                <h3>Your Camera</h3>
-                <video id="localVideo" autoplay muted playsinline></video>
-            </div>
-        </div>
-        
-        <!-- Student View -->
-        <div class="student-view">
-            <div class="remote-video-wrapper">
-                <h3>Teacher's Camera</h3>
-                <video id="remoteVideo" autoplay playsinline></video>
-            </div>
-        </div>
-        
-        <div class="controls">
-        <button id="endBtn">End Session</button>
-        <button id="toggleVideoBtn"><i class="fas fa-video"></i> Video</button>
-        <button id="toggleAudioBtn"><i class="fas fa-microphone"></i> Audio</button>
-        <button id="fullscreenBtn"><i class="fas fa-expand"></i> Fullscreen</button>
-        </div>
+      <h1 class=".page-title">Virtual Classroom</h1>
+      <div class="class-code-container">
+        <span>Class Code: </span>
+        <span id="roomCode" class="class-code-display"></span>
+      </div>
 
+      <div class="status-container">
+        <div id="connectionStatus">Waiting for connection...</div>
+        <div id="streamStatus"></div>
+      </div>
+
+      <!-- Teacher View -->
+      <div class="teacher-container">
+        <div class="video-wrapper">
+          <h3>Your Camera</h3>
+          <video id="localVideo" autoplay muted playsinline></video>
+        </div>
+      </div>
+
+      <!-- Student View -->
+      <div class="student-view">
+        <div class="remote-video-wrapper">
+          <h3>Teacher's Camera</h3>
+          <video id="remoteVideo" autoplay playsinline></video>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="endBtn">End Session</button>
+        <div id="teacherControls">
+        <button id="toggleVideoBtn"><i class="fas fa-video"></i> Video</button>
+        <button id="toggleAudioBtn">
+          <i class="fas fa-microphone"></i> Audio
+        </button></div>
+        <button id="fullscreenBtn">
+          <i class="fas fa-expand"></i> Fullscreen
+        </button>
+        <button
+          id="ChatBtn"
+          onclick="openChat()"
+          style="background-color: #0099ff"
+        >
+          <i class="fas fa-comments"></i> Chat
+        </button>
+      </div>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        // Simple tab switching logic
-        function switchTab(role) {
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            
-            const clickedTab = document.querySelector(`.tab:nth-child(${role === 'teacher' ? 1 : 2})`);
-            clickedTab.classList.add('active');
-            
-            document.getElementById('teacher-container').style.display = role === 'teacher' ? 'block' : 'none';
-            document.getElementById('student-container').style.display = role === 'student' ? 'block' : 'none';
-        }
-        
-        // Check URL for room code
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.has('room')) {
-            switchTab('student');
-            document.getElementById('roomInput').value = urlParams.get('room');
-        }
+      // Simple tab switching logic
+      function switchTab(role) {
+        const tabs = document.querySelectorAll(".tab");
+        tabs.forEach((tab) => tab.classList.remove("active"));
+
+        const clickedTab = document.querySelector(
+          `.tab:nth-child(${role === "teacher" ? 1 : 2})`
+        );
+        clickedTab.classList.add("active");
+
+        document.getElementById("teacher-container").style.display =
+          role === "teacher" ? "block" : "none";
+        document.getElementById("student-container").style.display =
+          role === "student" ? "block" : "none";
+      }
+
+      // Check URL for room code
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("room")) {
+        switchTab("student");
+        document.getElementById("roomInput").value = urlParams.get("room");
+      }
     </script>
     <div id="footer-container"></div>
     <script src="/app.js"></script>
-</body>
+  </body>
 </html>
