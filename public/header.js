@@ -38,35 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
       <a href="https://vignaniit.edu.in/" target="blank"><img src="./img/Clg_Logo.png" alt="College Logo" class="college-logo" height="50"></a>
       </div>
       <div class="college-logo-container"><a href="./skills-to-learn.html"><img src="./img/cse-logo.png" height="50"></a></div>
-      <div class="profile-container">
-        <div class="profile-icon">
-          <i class="fas fa-user-circle"></i>
-        </div>
-      </div>
     </nav>
 
-    <!-- Login Modal -->
-    <div class="login-modal">
-      <div class="login-modal-content">
-        <span class="close-login-modal">&times;</span>
-        <h2>Login to STREAM<span >NEXUS</span></h2>
-        <form class="login-form">
-          <div class="form-group">
-            <label for="username">Username/Email</label>
-            <input type="text" id="username" name="username" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-          </div>
-          <button type="submit" class="login-btn">Login</button>
-          <div class="login-links">
-            <a href="#" class="forgot-password">Forgot Password?</a>
-            <a href="#" class="signup-link">New User? Sign Up</a>
-          </div>
-        </form>
-      </div>
-    </div>
   `;
 
   // Sidebar Toggle

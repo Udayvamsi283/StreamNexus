@@ -352,3 +352,8 @@ document.getElementById("fullscreenBtn").addEventListener("click", () => {
         videoElement.msRequestFullscreen();
     }
 });
+function openChat() {
+  const hostname = window.location.hostname;
+  const chatURL = `http://${hostname}:3001/index_chat.html`;
+  window.open(chatURL, "_blank");
+}
