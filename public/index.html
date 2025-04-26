@@ -55,27 +55,13 @@
           <h3>Virtual class room</h3>
           <p>Start or Join a class</p>
         </div></a>
-        <a href="./index_chat.html"style="text-decoration: none;color: white;"><div class="card" id="join-stream">
+        <a onclick="openChat()"style="text-decoration: none;color: white;"><div class="card" id="join-stream">
           <div class="card-icon">
             <i class="fas fa-comments"></i>
           </div>
           <h3>Chat Box</h3>
           <p>Ask a question in chat</p>
         </div></a>
-        <div class="card" id="view-recordings">
-          <div class="card-icon">
-            <i class="fas fa-play-circle"></i>
-          </div>
-          <h3>View Recordings</h3>
-          <p>See past sessions</p>
-        </div>
-        <div class="card" id="notes-resources">
-          <div class="card-icon">
-            <i class="fas fa-book"></i>
-          </div>
-          <h3>Notes & Resources</h3>
-          <p>Access study materials</p>
-        </div>
       </div>
 
       <!-- Stream View (Initially Hidden) -->
@@ -136,5 +122,12 @@
 
     <div id="footer-container"></div>
     <script src="script.js"></script>
+    <script>
+    function openChat() {
+      const hostname = window.location.hostname;
+      const chatURL = `http://${hostname}:3001/index_chat.html`;
+      window.open(chatURL, '_blank');
+    }
+  </script>
   </body>
 </html>
