@@ -319,3 +319,36 @@ function endClass(forceClose = false) {
         // window.location.href = "/";
     }
 }
+// Toggle Video
+document.getElementById("toggleVideoBtn").addEventListener("click", () => {
+    const videoTrack = localStream.getVideoTracks()[0];
+    if (videoTrack) {
+        videoTrack.enabled = !videoTrack.enabled;
+        document.getElementById("toggleVideoBtn").innerHTML = videoTrack.enabled 
+            ? '<i class="fas fa-video"></i> Video' 
+            : '<i class="fas fa-video-slash"></i> Video Off';
+    }
+});
+
+// Toggle Audio
+document.getElementById("toggleAudioBtn").addEventListener("click", () => {
+    const audioTrack = localStream.getAudioTracks()[0];
+    if (audioTrack) {
+        audioTrack.enabled = !audioTrack.enabled;
+        document.getElementById("toggleAudioBtn").innerHTML = audioTrack.enabled 
+            ? '<i class="fas fa-microphone"></i> Audio' 
+            : '<i class="fas fa-microphone-slash"></i> Muted';
+    }
+});
+
+// Fullscreen
+document.getElementById("fullscreenBtn").addEventListener("click", () => {
+    const videoElement = isTeacher ? document.getElementById("localVideo") : document.getElementById("remoteVideo");
+    if (videoElement.requestFullscreen) {
+        videoElement.requestFullscreen();
+    } else if (videoElement.webkitRequestFullscreen) {
+        videoElement.webkitRequestFullscreen();
+    } else if (videoElement.msRequestFullscreen) {
+        videoElement.msRequestFullscreen();
+    }
+});
